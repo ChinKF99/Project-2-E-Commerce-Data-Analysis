@@ -32,11 +32,12 @@ CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 			TRUNCATE TABLE bronze.ecommerce;
 			PRINT 'INSERTING TO TABLE';
 			BULK INSERT bronze.ecommerce
-			FROM 'C:\Users\Khai Foong\Desktop\Data Analyst Project\Project_3_E-Commerce Data\cleaned_data.csv'
+			-- Change the file path to local machine e.g. *FROM: Local machine File Path*
+			FROM 'C:\Users\khaifoox\OneDrive - Intel Corporation\Desktop\Data Analyst Project\Project-2-E-Commerce-Data-Analysis-main\cleaned_data.csv'
 			WITH(
 				FIRSTROW = 2,
 				FIELDTERMINATOR = ',',
-				ROWTERMINATOR = '\n',
+				ROWTERMINATOR = '0x0a',
 				TABLOCK
 			);
 			SET @end_time = GETDATE();
