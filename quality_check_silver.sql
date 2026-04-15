@@ -17,19 +17,30 @@ Usage Notes:
 ===============================================================================
 */
 
+
 -- ====================================================================
--- Checking 'silver.ecommerce'
+-- Checking 'silver.dim_customers'
 -- ====================================================================
 
-
--- Check for NULLs or Duplicates in Primary Key customer_id
+-- Check for NULLs or Duplicates in customer_id for *silver.dim_customers table*
 -- Expectation: No Results
 SELECT
 customer_id,
-COUNT(*)
-FROM --To be filled
+COUNT(*) as duplicate
+FROM silver.dim_customers
 GROUP BY customer_id
 HAVING count(*) >1 OR customer_id IS NULL
+
+-- Check for NULLS & data standardization & consistency for country column
+-- Expectation: No Results
+SELECT 
+country
+FROM silver.dim_customers
+WHERE country is NULL OR country != LTRIM(RTRIM(country))
+
+-- ====================================================================
+-- Checking 'silver.dim_stocks'
+-- ====================================================================
 
 -- Check for NULLS & data standardization & consistency for stock_code
 -- Expectation: No Results
@@ -68,9 +79,4 @@ stock_unit_price
 FROM --To be filled
 WHERE stock_unit_price IS NULL
 
--- Check for NULLS & data standardization & consistency for stock_name
--- Expectation: No Results
-SELECT 
-country
-FROM --To be filled
-WHERE country is NULL OR country != LTRIM(RTRIM(stock_name))
+

@@ -8,6 +8,8 @@ Script Purposes:
 	Run this script to re-define the DDL structure of 'bronze' Tables
 */
 
+USE Ecommerce
+
 DROP TABLE IF EXISTS bronze.ecommerce
 GO
 
