@@ -38,9 +38,10 @@ DROP TABLE IF EXISTS silver.dim_stocks
 GO
 
 CREATE TABLE silver.dim_stocks (
-    stock_code NVARCHAR(50),
-    stock_name NVARCHAR(100),
-    stock_unit_price FLOAT
+    stock_name_variant NVARCHAR(100),
+    stock_code NVARCHAR(100),
+    stock_unit_price FLOAT,
+    variant_id INT
 );
 
 

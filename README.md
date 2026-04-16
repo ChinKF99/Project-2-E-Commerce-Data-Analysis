@@ -1,8 +1,9 @@
 SQL Skill:
-\-“Use CTE & ROW NUMBER function to ensure data standardizaiton, consistency, cleansing and flag out the latest row record to insert into respective dim & fact table.”
+\-“Use ROW NUMBER function to ensure data standardizaiton, consistency, cleansing and flag out the latest row record to insert into respective dim & fact table.”
+
+\-“Use Dense_RANK function to flag out item with the same stock_code but different stock_unit_price and categorize them into variants.”
 
 \-“Create Data Validation Scipts for checking data accuracy, consistency, and integrity.”
-
 
 Fix using Python Pandas:
 

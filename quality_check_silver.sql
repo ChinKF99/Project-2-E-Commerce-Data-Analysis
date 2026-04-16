@@ -42,14 +42,14 @@ WHERE country is NULL OR country != LTRIM(RTRIM(country))
 -- Checking 'silver.dim_stocks'
 -- ====================================================================
 
--- Check for NULLS & data standardization & consistency for stock_code
+-- Check for NULLS & duplicate in stock_name_variant
 -- Expectation: No Results
 SELECT
-stock_code,
-COUNT(*)
-FROM --To be filled
-GROUP BY stock_code
-HAVING count(*) >1 or stock_code is NULL
+stock_name_variant,
+COUNT(*) AS duplicate
+FROM silver.dim_stocks
+GROUP BY stock_name_variant
+HAVING count(*) >1 or stock_name_variant is NULL
 
 -- Check for NULLS & data standardization & consistency for stock_name
 -- Expectation: No Results
