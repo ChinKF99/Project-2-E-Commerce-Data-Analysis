@@ -24,7 +24,7 @@ Usage Notes:
 
 -- Check for NULLs or Duplicates in customer_id for *silver.dim_customers table*
 -- Expectation: No Results
-SELECT
+SELECT DISTINCT
 customer_id,
 COUNT(*) as duplicate
 FROM silver.dim_customers
@@ -33,7 +33,7 @@ HAVING count(*) >1 OR customer_id IS NULL
 
 -- Check for NULLS & data standardization & consistency for country column
 -- Expectation: No Results
-SELECT 
+SELECT DISTINCT
 country
 FROM silver.dim_customers
 WHERE country is NULL OR country != LTRIM(RTRIM(country))
@@ -44,45 +44,29 @@ WHERE country is NULL OR country != LTRIM(RTRIM(country))
 
 -- Check for NULLS & duplicate in stock_code_variant
 -- Expectation: No Results
-SELECT
+SELECT DISTINCT
 stock_code_variant,
 COUNT(*) AS duplicate
 FROM silver.dim_stocks
 GROUP BY stock_code_variant
 HAVING count(*) >1 or stock_code_variant is NULL
 
--- Check for NULLS & duplicate in stock_name_variant
--- Expectation: No Results
-SELECT
-stock_name_variant,
-COUNT(*) AS duplicate
-FROM silver.dim_stocks
-GROUP BY stock_name_variant
-HAVING count(*) >1 or stock_name_variant is NULL
-
 -- ====================================================================
 -- Checking 'silver.fact_sales'
 -- ====================================================================
 
--- Check for NULLS for sotck_quantity
+-- Check for NULLS for sotck_quantity, stock_unit_price, stock_unit_sales
 -- Expectation: No Results
-SELECT
-stock_quantity
-FROM --To be filled
-WHERE stock_quantity is NULL
+SELECT DISTINCT
+stock_quantity,
+stock_unit_price,
+stock_sales
+FROM silver.fact_sales
+WHERE stock_quantity is NULL or stock_unit_price IS NULL or stock_sales IS NULL
 
--- Check for NULLS for plan_end_date
+-- Check for data accuracy, stock_quantity x stock_unit_price = stock_unit_sales
 -- Expectation: No Results
-SELECT 
-plan_end_date
-FROM --To be filled
-WHERE plan_end_date IS NULL
-
--- Check for NULLS for stock_unit_price
--- Expectation: No Results
-SELECT 
-stock_unit_price
-FROM --To be filled
-WHERE stock_unit_price IS NULL
-
-
+SELECT DISTINCT
+*
+FROM silver.fact_sales
+WHERE (stock_quantity * stock_unit_price) != stock_sales

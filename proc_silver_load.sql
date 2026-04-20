@@ -64,8 +64,6 @@ BEGIN
 			country,
 			stock_code_category,
 			stock_name_category,
-			-- To correct naming same stock_code & price but different naming, here base on DENSE RANK or the NEXT QUERY 
-		
 			DENSE_RANK() OVER ( PARTITION BY stock_code_category ORDER BY stock_unit_price ASC
 			) AS variant_id,
 			stock_quantity,
@@ -158,7 +156,8 @@ BEGIN
 			stock_name_variant,
 			stock_unit_price,
 			-- Only keep 1 record for each stock of each variant
-			ROW_NUMBER() OVER ( PARTITION BY stock_name_variant ORDER BY stock_unit_price ASC
+			-- Note: Some products have the same stock_name but different stock_code & pricing
+			ROW_NUMBER() OVER ( PARTITION BY stock_code_variant ORDER BY stock_unit_price ASC
 			) AS flag
 		FROM silver.ecommerce)
 
@@ -190,14 +189,24 @@ BEGIN
 		TRUNCATE TABLE silver.fact_sales;
 		PRINT '>>>>>INSERTING TO TABLE: silver.fact_sales';
 
-		/*SELECT
-		customer_id,
-		invoice_no,
-		invoice_date,
-		stock_code,
-		stock_quantity,
-		stock_unit_price
-		FROM silver.ecommerce*/
+		INSERT INTO silver.fact_sales
+		SELECT
+			customer_id,
+			invoice_no,
+			invoice_date,
+			stock_code_category,
+			stock_name_category,
+			stock_code_variant,
+			stock_name_variant,
+			stock_quantity,
+			stock_unit_price,
+			stock_quantity * stock_unit_price AS stock_sales
+		FROM silver.ecommerce
+
+		SET @end_time = GETDATE();
+		PRINT '>>>>>LOAD DURATION: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' SECONDS';
+        PRINT '>>>>>LOAD COMPLETE silver.fact_sales';
+        PRINT '>>>>>-------------';
 
 		SET @batch_end_time = GETDATE();
 		PRINT 'BATCH LOAD DURATON ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' SECONDS';

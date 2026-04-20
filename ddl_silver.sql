@@ -5,7 +5,9 @@ DDL Script: Create Silver Tables
 Script Purpose:
     This script creates tables in the 'silver' schema, dropping existing tables 
     if they already exist.
-	Run this script to re-define the DDL structure of 'bronze' Tables
+	Run this script to re-define the DDL structure of 'silver' Tables
+
+Usage: Execute as below
 ===============================================================================
 */
 
@@ -57,7 +59,11 @@ CREATE TABLE silver.fact_sales (
     customer_id INT,
     invoice_no NVARCHAR(50),
     invoice_date DATE,
-    stock_code NVARCHAR(50),
+    stock_code_category NVARCHAR(50),
+    stock_name_category NVARCHAR(100),
+    stock_code_variant NVARCHAR(50),
+    stock_name_variant NVARCHAR(100),
     stock_quantity INT,
-    stock_unit_price FLOAT
+    stock_unit_price FLOAT,
+    stock_sales FLOAT
 );
