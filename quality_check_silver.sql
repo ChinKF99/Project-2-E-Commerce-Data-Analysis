@@ -42,6 +42,15 @@ WHERE country is NULL OR country != LTRIM(RTRIM(country))
 -- Checking 'silver.dim_stocks'
 -- ====================================================================
 
+-- Check for NULLS & duplicate in stock_code_variant
+-- Expectation: No Results
+SELECT
+stock_code_variant,
+COUNT(*) AS duplicate
+FROM silver.dim_stocks
+GROUP BY stock_code_variant
+HAVING count(*) >1 or stock_code_variant is NULL
+
 -- Check for NULLS & duplicate in stock_name_variant
 -- Expectation: No Results
 SELECT
@@ -51,12 +60,9 @@ FROM silver.dim_stocks
 GROUP BY stock_name_variant
 HAVING count(*) >1 or stock_name_variant is NULL
 
--- Check for NULLS & data standardization & consistency for stock_name
--- Expectation: No Results
-SELECT
-stock_name
-FROM --To be filled
-WHERE stock_name is NULL OR stock_name != LTRIM(RTRIM(stock_name))
+-- ====================================================================
+-- Checking 'silver.fact_sales'
+-- ====================================================================
 
 -- Check for NULLS for sotck_quantity
 -- Expectation: No Results

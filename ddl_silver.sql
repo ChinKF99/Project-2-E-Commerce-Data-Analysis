@@ -15,14 +15,17 @@ DROP TABLE IF EXISTS silver.ecommerce
 GO
 
 CREATE TABLE silver.ecommerce (
-    invoice_no NVARCHAR(50),
-    stock_code NVARCHAR(50),
-    stock_name NVARCHAR(100),
-    stock_quantity INT,
-    invoice_date DATE,
-    stock_unit_price FLOAT,
     customer_id INT,
-    country NVARCHAR(50)
+    invoice_no NVARCHAR(50),
+    invoice_date DATE,
+    country NVARCHAR(50),
+    stock_code_category NVARCHAR(50),
+    stock_name_category NVARCHAR(100),
+    variant_id INT,
+    stock_code_variant NVARCHAR(50),
+    stock_name_variant NVARCHAR(100),
+    stock_quantity INT,
+    stock_unit_price FLOAT
 );
 
 DROP TABLE IF EXISTS silver.dim_customers
@@ -38,10 +41,12 @@ DROP TABLE IF EXISTS silver.dim_stocks
 GO
 
 CREATE TABLE silver.dim_stocks (
+    stock_code_category NVARCHAR(50),
+    stock_name_category NVARCHAR(100),
+    variant_id INT,
+    stock_code_variant NVARCHAR(50),
     stock_name_variant NVARCHAR(100),
-    stock_code NVARCHAR(100),
-    stock_unit_price FLOAT,
-    variant_id INT
+    stock_unit_price FLOAT
 );
 
 

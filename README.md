@@ -11,3 +11,6 @@ Fix using Python Pandas:
 
 \-“CustomerID was automatically interpreted as float due to missing values, resulting in .0 suffixes. This was resolved by converting the column to nullable integer type before casting to string.”
 
+
+PROBLEMS ENCOUNTERED:
+-Stock with same code, price but different naming. To ensure consistent naming before adding variant id to related column

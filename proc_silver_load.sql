@@ -40,26 +40,62 @@ BEGIN
 		PRINT '>>>>>INSERTING TO TABLE: silver.ecommerce';
 
 		-- CTE to esure data cleansing, standardizaiton & consistency
-		WITH cte_cleaned_order_data AS (
+		WITH cte_cleaned_data AS (
 		SELECT
-			LTRIM(RTRIM(invoice_no)) AS invoice_no,
-			LTRIM(RTRIM(stock_code)) AS stock_code,
-			LTRIM(RTRIM(UPPER(REPLACE(stock_name, '"', '')))) AS stock_name,
-			CAST(LTRIM(RTRIM(stock_quantity)) AS INT) as stock_quantity,
-			CONVERT(DATE, invoice_date , 101) AS invoice_date,
-			CAST(stock_unit_price AS FLOAT) AS stock_unit_price,
 			CAST(LTRIM(RTRIM(customer_id)) AS INT) AS customer_id,
-			UPPER(country) AS country
+			LTRIM(RTRIM(invoice_no)) AS invoice_no,
+			CONVERT(DATE, invoice_date , 101) AS invoice_date,
+			UPPER(country) AS country,
+			LTRIM(RTRIM(stock_code)) AS stock_code_category,
+			LTRIM(RTRIM(UPPER(REPLACE(stock_name, '"', '')))) AS stock_name_category,
+			CAST(LTRIM(RTRIM(stock_quantity)) AS INT) as stock_quantity,
+			CAST(stock_unit_price AS FLOAT) AS stock_unit_price
 		FROM bronze.ecommerce
 		-- Exclude rows which have NULL value data in these 2 column
-		WHERE stock_name IS NOT NULL AND customer_id IS NOT NULL)
+		WHERE stock_name IS NOT NULL AND customer_id IS NOT NULL),
 
-		-- Insert data to table using CTE: cte_cleaned_order_data
+		-- CTE to add variant_id as some stock_id/stock_name of 1 product consist of multiple stock_unit_price
+		-- E.G. [stock_id = 101] [stock_name: towel] [Price:0.85, 0.49]
+		cte_add_variantid AS(
+		SELECT
+			customer_id,
+			invoice_no,
+			invoice_date,
+			country,
+			stock_code_category,
+			stock_name_category,
+			-- To correct naming same stock_code & price but different naming, here base on DENSE RANK or the NEXT QUERY 
+		
+			DENSE_RANK() OVER ( PARTITION BY stock_code_category ORDER BY stock_unit_price ASC
+			) AS variant_id,
+			stock_quantity,
+			stock_unit_price
+		FROM cte_cleaned_data
+		-- Exclude data value such as Manual input, postage, discount and so on
+		WHERE stock_code_category NOT LIKE '[a-zA-Z]%'),
+
+		-- CTE to add stock_code_variant, stock_name_variant column
+		cte_add_stockid_stockname_variant_data AS(
+		SELECT
+			customer_id,
+			invoice_no,
+			invoice_date,
+			country,
+			stock_code_category,
+			stock_name_category,
+			variant_id,
+			-- Add variant_id to differentiate each variant for code & name due to different pricing
+			stock_code_category +' v' + CAST(variant_id AS NVARCHAR(10)) AS stock_code_variant,
+			stock_name_category +' v' + CAST(variant_id AS NVARCHAR(10)) AS stock_name_variant,
+			stock_quantity,
+			stock_unit_price
+		FROM cte_add_variantid)
+
+		-- Insert data to table silver.ecommerce using CTE: cte_cleaned_order_data
 		INSERT INTO silver.ecommerce
 		SELECT
 			*
-		FROM cte_cleaned_order_data
-		ORDER BY customer_id ASC, invoice_date DESC
+		FROM cte_add_stockid_stockname_variant_data
 
 		SET @end_time = GETDATE()
 		PRINT '>>>>>LOAD DURATION: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' SECONDS';
@@ -112,40 +148,31 @@ BEGIN
 		TRUNCATE TABLE silver.dim_stocks;
 		PRINT '>>>>>INSERTING TO TABLE: silver.dim_stocks';
 
-		-- CTE to clean data and add variant_id to stock with the same stock_code but different stock_unit_price
-		WITH cte_clean_addvariant_stocks AS(
+		--CTE to filter and keep only 1 record for stock of each variant
+		WITH cte_filter_stocks AS(
 		SELECT
-			stock_name,
-			stock_code,
-			stock_unit_price,
-			DENSE_RANK() OVER ( PARTITION BY stock_code ORDER BY stock_unit_price ASC
-			) AS variant_id
-		FROM silver.ecommerce
-		-- Exclude stock_name value such as Manual input, postage discount and so on
-		WHERE stock_code NOT LIKE '[a-zA-Z]%'),
-
-		--CTE to filter and keep only 1 record for each stock of each variant
-		cte_filter_stocks AS(
-		SELECT
-			stock_name +' v' + CAST(variant_id AS NVARCHAR(10)) AS stock_name_variant,
-			stock_code,
-			stock_unit_price,
+			stock_code_category,
+			stock_name_category,
 			variant_id,
+			stock_code_variant,
+			stock_name_variant,
+			stock_unit_price,
 			-- Only keep 1 record for each stock of each variant
-			ROW_NUMBER() OVER ( PARTITION BY stock_name +' v' + CAST(variant_id AS NVARCHAR(10)) ORDER BY stock_unit_price ASC
+			ROW_NUMBER() OVER ( PARTITION BY stock_name_variant ORDER BY stock_unit_price ASC
 			) AS flag
-		FROM cte_clean_addvariant_stocks) 
+		FROM silver.ecommerce)
 
 		-- Insert data to table using CTE: cte_filter_stocks
 		INSERT INTO silver.dim_stocks
 		SELECT
+			stock_code_category,
+			stock_name_category,
+			variant_id,
+			stock_code_variant,
 			stock_name_variant,
-			stock_code,
-			stock_unit_price,
-			variant_id
+			stock_unit_price
 		FROM cte_filter_stocks
 		WHERE flag = 1
-		ORDER BY stock_code, stock_unit_price
 
 		SET @end_time = GETDATE();
 		PRINT '>>>>>LOAD DURATION: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' SECONDS';
@@ -156,6 +183,21 @@ BEGIN
 		PRINT '===============================';
 		PRINT 'LOADING silver.fact_sales';
 		PRINT '==============================='
+
+		-- Loading silver.fact_sales
+		SET @start_time = GETDATE();
+		PRINT '>>>>>TRUNCATING TABLE: silver.fact_sales';
+		TRUNCATE TABLE silver.fact_sales;
+		PRINT '>>>>>INSERTING TO TABLE: silver.fact_sales';
+
+		/*SELECT
+		customer_id,
+		invoice_no,
+		invoice_date,
+		stock_code,
+		stock_quantity,
+		stock_unit_price
+		FROM silver.ecommerce*/
 
 		SET @batch_end_time = GETDATE();
 		PRINT 'BATCH LOAD DURATON ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' SECONDS';
