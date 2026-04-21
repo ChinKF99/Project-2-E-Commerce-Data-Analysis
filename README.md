@@ -27,3 +27,20 @@ Fix using Python Pandas:
 
 \-“CustomerID was automatically interpreted as float due to missing values, resulting in .0 suffixes. This was resolved by converting the column to nullable integer type before casting to string.”
 
+Business Questions:
+
+Revenue Analysis
+-Monthly Revenue trend overtime (Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend from Jan to November)
+-Which Country generate the most revenue
+
+Customer Analysis
+-Top 10 customer by revenue
+-Repeat purchase rate (Abit hard need to see)
+
+Product Analysis
+-Products that sells that most (Quantity)
+-Products that generate the most revenue (Sales Amount)
+-Products that get return the most (Investigation)
+
+Example of Business Insights
+“Over 65% of total revenue is generated from the UK market, indicating high dependency on a single region and potential risk if demand declines.”

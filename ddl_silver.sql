@@ -65,5 +65,6 @@ CREATE TABLE silver.fact_sales (
     stock_name_variant NVARCHAR(100),
     stock_quantity INT,
     stock_unit_price FLOAT,
-    stock_sales FLOAT
+    stock_sales FLOAT,
+    country NVARCHAR(50)
 );

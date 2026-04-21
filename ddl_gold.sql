@@ -61,6 +61,7 @@ SELECT
     stock_name_variant AS stock_name_variant,
     stock_quantity AS quantity,
     stock_unit_price AS price,
-    stock_sales AS sales
+    stock_sales AS sales,
+    country AS country
 FROM silver.fact_sales
 GO

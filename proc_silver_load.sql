@@ -200,7 +200,8 @@ BEGIN
 			stock_name_variant,
 			stock_quantity,
 			stock_unit_price,
-			stock_quantity * stock_unit_price AS stock_sales
+			stock_quantity * stock_unit_price AS stock_sales,
+			country
 		FROM silver.ecommerce
 
 		SET @end_time = GETDATE();
