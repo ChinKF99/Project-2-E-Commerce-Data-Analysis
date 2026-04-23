@@ -34,13 +34,13 @@ Revenue Analysis
 -Which Country generate the most revenue (United Kingdom achieve the highest revenue of 82%, while all other 36 countires contribute 18% of the total revenue.)
 
 Customer Analysis
--Top 10 customer by revenue
--Repeat purchase rate (Abit hard need to see)
+-How many customer are one time buyer or repeated buyer (92% of our customers has repeated orders whic suggest customer expectations & satisfactons were met or exceeded.)
+-Customer segmentation (High, Medium, Low)
 
 Product Analysis
--Products that sells that most (Quantity) (Jumbo Bag is the best selling product, peaking at 45k units sold throughout year 2011)
--Products that generate the most revenue (Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011)
--Products that get return the most (Investigation)
+-Products that sells that most (Quantity) (Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing )
+-Products that generate the most revenue (Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, which imply competitive pricing)
+-Products that get return the most (Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction)
 
 Example of Business Insights
 “Over 65% of total revenue is generated from the UK market, indicating high dependency on a single region and potential risk if demand declines.”
