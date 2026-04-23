@@ -31,15 +31,15 @@ Business Questions:
 
 Revenue Analysis
 -Monthly Revenue trend overtime (Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend from Jan to November)
--Which Country generate the most revenue
+-Which Country generate the most revenue (United Kingdom achieve the highest revenue of 82%, while all other 36 countires contribute 18% of the total revenue.)
 
 Customer Analysis
 -Top 10 customer by revenue
 -Repeat purchase rate (Abit hard need to see)
 
 Product Analysis
--Products that sells that most (Quantity)
--Products that generate the most revenue (Sales Amount)
+-Products that sells that most (Quantity) (Jumbo Bag is the best selling product, peaking at 45k units sold throughout year 2011)
+-Products that generate the most revenue (Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011)
 -Products that get return the most (Investigation)
 
 Example of Business Insights

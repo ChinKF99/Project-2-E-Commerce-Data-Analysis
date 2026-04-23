@@ -94,6 +94,8 @@ BEGIN
 		SELECT
 			*
 		FROM cte_add_stockid_stockname_variant_data
+		-- Only include data for Year 2011
+		WHERE YEAR(invoice_date) = 2011
 
 		SET @end_time = GETDATE()
 		PRINT '>>>>>LOAD DURATION: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' SECONDS';
