@@ -47,8 +47,19 @@ After analyzing the above questions, stakeholders can act accordingly. E.g. carr
 - Scatter Chart
 - Toggle button using view and bookmark panel
 
+## Construction Project Dataset
+The dataset use for this project is obtained Kaggle [Ecommmerce_Dataset]([construction_project_dataset_3000_messy.csv](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
+
+## Insights
+Revenue Analysis
+-Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend especially from August to November.
+-Which Country generate the most revenue (United Kingdom achieve the highest revenue of 82%, while all other 36 countires contribute 18% of the total revenue.)
 
 
+
+-Delay dosent necessary result in cost overrun. However the longer the delay, the higher the risk of significant cost overrun. From the chart a astounishing 51% cost overrun occured after delay above 150 days, indicating a strong relationship between schedule slippage and financial performance.  
+-Contractor WCT has the most delay and cost overrun of approximate 7,200 days and RM 19.2 Billion throughout the year. In contrast, SP Setia has the best performance overall with only 6,600 days delay and RM 1.21 billion cost overrun.  
+-From the scatter chart, Infrastructure project has the best cost efficiency and came by second in term of on time completion just after Residential. In contrast, Industrial project has the worst performance in both cost and time.  
 
 
 Business Questions:
