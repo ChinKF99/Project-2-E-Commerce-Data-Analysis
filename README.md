@@ -44,8 +44,9 @@ After analyzing the above questions, stakeholders can act accordingly. E.g. carr
 - Bar Chart
 - line Chart
 - Card
-- Scatter Chart
+- Pie Chart
 - Toggle button using view and bookmark panel
+- Dax & Power Query
 
 ## Construction Project Dataset
 The dataset use for this project is obtained Kaggle [Ecommmerce_Dataset]([construction_project_dataset_3000_messy.csv](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
