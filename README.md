@@ -1,3 +1,34 @@
+# Dashboard
+<img width="1522" height="890" alt="image" src="https://github.com/user-attachments/assets/dcd50043-acfd-49b4-a98f-65bfa61fd4df" />
+<img width="1543" height="767" alt="image" src="https://github.com/user-attachments/assets/b0b8d1a2-6997-4252-bb05-ed01bd01e732" />
+Button to toggle for quantity, sales and return of products
+<img width="1546" height="851" alt="image" src="https://github.com/user-attachments/assets/7e58ce69-811f-485b-a63c-4ee1a71ded93" />
+
+## Introduction  
+This e-commerce dashboard analyzes top-performing products, sales trends, and customer contributions to drive actionable insights.
+
+## Dashboard File  
+My final dashboard file is in [dashboard.pbix](dashboard.pbix)
+
+## Question to Analyze and why
+To deepen my understanding of our products, customer base, and sales trend,  I ask the following:
+
+
+### Delay Cost Analysis
+1. Does delayed project cost more?
+
+### Contractor Analysis
+1. Which Contractor has the highest Cost Overrun
+2. Which Contractor has most delay
+3. Which Contractor perform best overall
+
+### Project Category Analysis
+1. Which category has the most delay
+2. Which category has the worst cost control (Average/Total cost overrun)
+
+
+
+
 SQL Skill:
 -“Use ROW NUMBER function to ensure data standardizaiton, consistency, cleansing and flag out the latest row record to insert into respective dim \& fact table.”
 
