@@ -35,7 +35,7 @@ Revenue Analysis
 
 Customer Analysis
 -How many customer are one time buyer or repeated buyer (92% of our customers has repeated orders whic suggest customer expectations & satisfactons were met or exceeded.)
--Customer segmentation (High, Medium, Low)
+-Customer segmentation (Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year)
 
 Product Analysis
 -Products that sells that most (Quantity) (Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing )
