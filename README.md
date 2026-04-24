@@ -63,7 +63,7 @@ Customer Analysis
 Product Analysis  
 - Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product management & marketing.  
 - Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, hence we should adopt strategic approach to amplify it's market presence.  
-- Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction.  
+- Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or customer dissatisfaction.  
 
 ## Conclusion
 As a individual who has interest in data related skillsets/jobs, I embarked on this project to apply what I've learned throughout the months. E.g. validate original dataset, create new column metrics and ensure data standardizaiton/consistency. I hope this project serves as a strong portfolio for my data adventure.  
