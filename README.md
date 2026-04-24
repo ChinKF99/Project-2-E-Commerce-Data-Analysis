@@ -13,50 +13,43 @@ My final dashboard file is in [dashboard.pbix](dashboard.pbix)
 ## Question to Analyze and why
 To deepen my understanding of our products, customer base, and sales trend,  I ask the following:
 
+Revenue Analysis
+-What is revenue trend overtime?
+-Which Country generate the most revenue?
 
-### Delay Cost Analysis
-1. Does delayed project cost more?
+Product Analysis
+-Which product have the most sales?
+-Which product generate the most revenue?
 
-### Contractor Analysis
-1. Which Contractor has the highest Cost Overrun
-2. Which Contractor has most delay
-3. Which Contractor perform best overall
+Customer Analysis
+-One time buyer or repeated buyer?
+-Which customer segmentation to focus on to maintain & improve sales?
 
-### Project Category Analysis
-1. Which category has the most delay
-2. Which category has the worst cost control (Average/Total cost overrun)
+Note: Data with null value in customer_id/stock_name and stock_code_category that is non sales related e.g. Manual input, postage, discount and so on.
 
+After analyzing the above questions, stakeholders can act accordingly. E.g. carry out investigation or studies on worst performance product or introduce customer reward scheme for customer retention purposes.
 
+## Python
+- Pandas, to parse and standardized the dataset before loading into SQL server
 
+## SQL Skill Used
+- Adopt Medalion Architecture (Bronze, Silver, Gold) for Data Architecture
+- Data Cleansing e.g. CTE, ROW NUMBER, DENSE RANK, to flag out latest reocrd & repeated value.
+- Data Standardization
+- Data Conversion 
+- Data Enrichment e.g. Creating new column after spilting into DIM & FACT table.
+- Data Validation e.g. Scipts to check for duplication, accuracy and integrity.
 
-SQL Skill:
--“Use ROW NUMBER function to ensure data standardizaiton, consistency, cleansing and flag out the latest row record to insert into respective dim \& fact table.”
-
-
-
-\-“Use DENSE\_RANK function to flag out item with the same stock\_code but different stock\_unit\_price and categorize them into variants.”
-
-
-
-\-“Create Data Validation Scipts for checking data accuracy, consistency, and integrity.”
-
-
-
-\-“Use multiple CTE to cleanse \& transform data before loading it into silver layer table to reduce SQL coding complexity by improving readability and eliminating redundancy ”
-
-
-
-\-“Carry out data enrichment after loading into respective silver layer table. E.g. Sales amount derived from stock quantity x stock price.”
-
-
-
-Fix using Python Pandas:
-
-\-“The dataset contained commas within text fields which conflicted with CSV delimiters. Python (pandas) was used to correctly parse and standardize the dataset before loading into SQL Server.”
+## Power BI Used
+- Bar Chart
+- line Chart
+- Card
+- Scatter Chart
+- Toggle button using view and bookmark panel
 
 
 
-\-“CustomerID was automatically interpreted as float due to missing values, resulting in .0 suffixes. This was resolved by converting the column to nullable integer type before casting to string.”
+
 
 Business Questions:
 
