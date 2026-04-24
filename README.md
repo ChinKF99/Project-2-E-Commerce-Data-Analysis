@@ -5,7 +5,7 @@ Button to toggle for quantity, sales and return of products
 <img width="1546" height="851" alt="image" src="https://github.com/user-attachments/assets/7e58ce69-811f-485b-a63c-4ee1a71ded93" />
 
 ## Introduction  
-This E-commerce dashboard analyzes top-performing products, sales trends, and customer contributions to drive actionable insights.
+This E-commerce dashboard analyzes top-performing products, sales trend, and customer contribution to drive actionable insights.
 
 ## Dashboard File  
 My final dashboard file is in [dashboard.pbix](dashboard.pbix)
