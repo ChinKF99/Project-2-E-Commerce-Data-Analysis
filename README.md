@@ -49,7 +49,7 @@ After analyzing the above questions, stakeholders can act accordingly. E.g. carr
 - Dax & Power Query
 
 ## Construction Project Dataset
-The dataset use for this project is obtained from Kaggle [Ecommmerce_Dataset]([construction_project_dataset_3000_messy.csv](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
+The dataset use for this project is obtained from Kaggle [Ecommmerce_Dataset](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
 
 ## Insights
 Revenue Analysis  
