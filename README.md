@@ -52,18 +52,18 @@ After analyzing the above questions, stakeholders can act accordingly. E.g. carr
 The dataset use for this project is obtained from Kaggle [Ecommmerce_Dataset]([construction_project_dataset_3000_messy.csv](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
 
 ## Insights
-Revenue Analysis
--Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend especially from August to November.
--United Kingdom achieve the highest revenue of 82%, while all other 35 countires contribute 18% of the total revenue.
+Revenue Analysis  
+-Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend especially from August to November.  
+-United Kingdom achieve the highest revenue of 82%, while all other 35 countires contribute 18% of the total revenue.  
 
-Customer Analysis
--92% of our customers has repeated orders which suggest customer expectations & satisfactons were met or exceeded.
--Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year.
+Customer Analysis  
+-92% of our customers has repeated orders which suggest customer expectations & satisfactons were met or exceeded.  
+-Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year.  
 
-Product Analysis
--Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing.
--Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, hence we should adopt strategic approach to amplify it's market presence.
--Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction.
+Product Analysis  
+-Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing.  
+-Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, hence we should adopt strategic approach to amplify it's market presence.  
+-Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction.  
 
 ## Conclusion
-As a individual who has interest in data related skillsets/jobs, I embarked on this project to apply what I've learned throughout the months. E.g. validate original dataset, create new column metrics and ensure data standardizaiton/consistency. I hope this project serves as a strong portfolio for my data adventure.
+As a individual who has interest in data related skillsets/jobs, I embarked on this project to apply what I've learned throughout the months. E.g. validate original dataset, create new column metrics and ensure data standardizaiton/consistency. I hope this project serves as a strong portfolio for my data adventure.  
