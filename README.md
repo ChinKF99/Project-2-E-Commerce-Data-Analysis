@@ -53,29 +53,16 @@ The dataset use for this project is obtained Kaggle [Ecommmerce_Dataset]([constr
 ## Insights
 Revenue Analysis
 -Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend especially from August to November.
--Which Country generate the most revenue (United Kingdom achieve the highest revenue of 82%, while all other 36 countires contribute 18% of the total revenue.)
-
-
-
--Delay dosent necessary result in cost overrun. However the longer the delay, the higher the risk of significant cost overrun. From the chart a astounishing 51% cost overrun occured after delay above 150 days, indicating a strong relationship between schedule slippage and financial performance.  
--Contractor WCT has the most delay and cost overrun of approximate 7,200 days and RM 19.2 Billion throughout the year. In contrast, SP Setia has the best performance overall with only 6,600 days delay and RM 1.21 billion cost overrun.  
--From the scatter chart, Infrastructure project has the best cost efficiency and came by second in term of on time completion just after Residential. In contrast, Industrial project has the worst performance in both cost and time.  
-
-
-Business Questions:
-
-Revenue Analysis
--Monthly Revenue trend overtime (Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend from Jan to November)
--Which Country generate the most revenue (United Kingdom achieve the highest revenue of 82%, while all other 36 countires contribute 18% of the total revenue.)
+-United Kingdom achieve the highest revenue of 82%, while all other 35 countires contribute 18% of the total revenue.
 
 Customer Analysis
--How many customer are one time buyer or repeated buyer (92% of our customers has repeated orders whic suggest customer expectations & satisfactons were met or exceeded.)
--Customer segmentation (Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year)
+-92% of our customers has repeated orders which suggest customer expectations & satisfactons were met or exceeded.
+-Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year.
 
 Product Analysis
--Products that sells that most (Quantity) (Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing )
--Products that generate the most revenue (Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, which imply competitive pricing)
--Products that get return the most (Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction)
+-Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product managemnent & marketing.
+-Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, hence we should adopt strategic approach to amplify it's market presence.
+-Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or consistent customer dissatisfaction.
 
-Example of Business Insights
-“Over 65% of total revenue is generated from the UK market, indicating high dependency on a single region and potential risk if demand declines.”
+## Conclusion
+As a individual who has interest in data related skillsets/jobs, I embarked on this project to apply what I've learned throughout the months. E.g. validate original dataset, create new column metrics and ensure data standardizaiton/consistency. I hope this project serves as a strong portfolio for my data adventure.
