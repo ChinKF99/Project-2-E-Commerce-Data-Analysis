@@ -14,16 +14,16 @@ My final dashboard file is in [dashboard.pbix](dashboard.pbix)
 To deepen my understanding of our products, customer base, and sales trend,  I ask the following:
 
 Revenue Analysis
--What is revenue trend overtime?
--Which Country generate the most revenue?
+-What is revenue trend overtime? 
+-Which Country generate the most revenue? 
 
 Product Analysis
--Which product have the most sales?
--Which product generate the most revenue?
+-Which product have the most sales? 
+-Which product generate the most revenue? 
 
 Customer Analysis
--One time buyer or repeated buyer?
--Which customer segmentation to focus on to maintain & improve sales?
+-One time buyer or repeated buyer? 
+-Which customer segmentation to focus on to maintain & improve sales? 
 
 Note: Data with null value in customer_id/stock_name and stock_code_category that is non sales related e.g. Manual input, postage, discount and so on.
 
