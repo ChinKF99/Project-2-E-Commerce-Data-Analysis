@@ -37,12 +37,12 @@ Dimension Tables:
 - Customer  
 - Product  
 
-## Tools & Skills Used
+### Tools & Skills Used
 
-## Python
+### Python
 - Pandas for data preprocessing and standardization before loading into SQL server
 
-## SQL
+### SQL
 - Adopt Medalion Architecture (Bronze > Silver > Gold) for Data Architecture
 - Data Cleansing & Transformation e.g. CTE, ROW NUMBER, DENSE RANK, to flag out latest reocrd & repeated value.
 - Data Standardization
