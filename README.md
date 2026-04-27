@@ -4,30 +4,40 @@
 Button to toggle for quantity, sales and return of products
 <img width="1546" height="851" alt="image" src="https://github.com/user-attachments/assets/7e58ce69-811f-485b-a63c-4ee1a71ded93" />
 
-## Introduction  
-This E-commerce dashboard analyzes top-performing products, sales trend, and customer contribution to drive actionable insights.
+## Introduction/Project Overview  
+This project analyzes transactional e-commerce data to identify key revenue drivers, customer purchasing behavior, and product performance. The goal is to generate actionable insights that support sales growth and customer retention strategies.
 
 ## Dashboard File  
 My final dashboard file is in [dashboard.pbix](dashboard.pbix)
 
 ## Question to Analyze and why
-To deepen my understanding of our products, customer base, and sales trend,  I ask the following:
+The analysis focuses on three key areas:
 
 Revenue Analysis  
 - What is revenue trend overtime?  
 - Which Country generate the most revenue?  
 
 Product Analysis  
-- Which product have the most sales?  
-- Which product generate the most revenue?  
+- Which products generate the highest sales volume?
+- Which products contribute the most revenue?
 
 Customer Analysis  
-- One time buyer or repeated buyer?  
-- Which customer segmentation to focus on to maintain & improve sales?  
+- What is the proportion of one-time vs repeat customers?
+- How is revenue distributed across customer segments?
 
-Note: Data with null value in customer_id/stock_name and stock_code_category that is non sales related e.g. Manual input, postage, discount and so on is excluded.
+Note: Data with null value in customer_id/stock_name and stock_code_category that is non sales related e.g. Manual input, postage, discount and so on is excluded to improve overall data accuracy.
 
 After analyzing the above questions, stakeholders can act accordingly. E.g. carry out investigation or studies on worst performance product or introduce customer reward scheme for customer retention purposes.
+
+## Data Model  
+A star schema was implemented to improve performance and scalability:  
+
+Fact Table:  
+- Sales Transactions  
+
+Dimension Tables:  
+- Customer  
+- Product  
 
 ## Python
 - Pandas, to parse and standardized the dataset before loading into SQL server
