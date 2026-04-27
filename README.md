@@ -37,7 +37,7 @@ Dimension Tables:
 - Customer  
 - Product  
 
-### Tools & Skills Used
+### ⚙️ Tools & Skills Used
 
 ### Python
 - Pandas for data preprocessing and standardization before loading into SQL server
@@ -50,7 +50,7 @@ Dimension Tables:
 - Data Enrichment e.g. Creating new column after spilting into DIM & FACT table.
 - Data validation for accuracy and consistency e.g. Scipts to check for duplication, accuracy and integrity.
 
-## Power BI
+### Power BI
 - Interactive dashboard development
 - Bookmark toggle (Sales / Quantity / Returns)
 - DAX measures for KPI calculation
