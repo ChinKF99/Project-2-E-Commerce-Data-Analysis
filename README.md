@@ -33,47 +33,51 @@ After analyzing the above questions, stakeholders can act accordingly. E.g. carr
 A star schema was implemented to improve performance and scalability:  
 
 Fact Table:  
-- Sales Transactions  
+- Sales
 
 Dimension Tables:  
 - Customer  
 - Product  
 
 ## Python
-- Pandas, to parse and standardized the dataset before loading into SQL server
+- Pandas for data preprocessing and standardization before loading into SQL server
 
 ## SQL Skill Used
-- Adopt Medalion Architecture (Bronze, Silver, Gold) for Data Architecture
-- Data Cleansing e.g. CTE, ROW NUMBER, DENSE RANK, to flag out latest reocrd & repeated value.
+- Adopt Medalion Architecture (Bronze > Silver > Gold) for Data Architecture
+- Data Cleansing & Transformation e.g. CTE, ROW NUMBER, DENSE RANK, to flag out latest reocrd & repeated value.
 - Data Standardization
 - Data Conversion 
 - Data Enrichment e.g. Creating new column after spilting into DIM & FACT table.
-- Data Validation e.g. Scipts to check for duplication, accuracy and integrity.
+- Data validation for accuracy and consistency e.g. Scipts to check for duplication, accuracy and integrity.
 
 ## Power BI Used
-- Bar Chart
-- line Chart
-- Card
-- Pie Chart
-- Toggle button using view and bookmark panel
-- Dax & Power Query
+- Interactive dashboard development
+- Bookmark toggle (Sales / Quantity / Returns)
+- DAX measures for KPI calculation
+- Visualizations: Bar, Line, Pie, Cards
 
 ## Construction Project Dataset
 The dataset use for this project is obtained from Kaggle [Ecommmerce_Dataset](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
 
 ## Insights
 Revenue Analysis  
-- Sales throughout 2011 peak at 1.12M on November and bottom out at 0.34M on December, indicating a upwards trend especially from August to November.  
-- United Kingdom achieve the highest revenue of 82%, while all other 35 countires contribute 18% of the total revenue.  
+- Revenue shows a strong upward trend, peaking at 1.12M in November.  
+- United Kingdom contributes 82% of total revenue, indicating heavy geographic concentration.  
 
 Customer Analysis  
-- 92% of our customers has repeated orders which suggest customer expectations & satisfactons were met or exceeded.  
-- Top 20% of our customer contributed 50% of overall orders and 74% of the total revenue generated throughout the year, this indicate retention of the top 20% customer is crucial to accelerate sales growth for the upcoming year.  
+- 92% of customers are repeat buyers, suggesting strong customer satisfaction and retention.  
+- The top 20% of customers generate 74% of total revenue, highlighting a strong Pareto distribution.     
 
 Product Analysis  
-- Jumbo Bag is the best selling product, peaking at 45k sold and 3rd in terms of revenue $80k, this suggest excellence in product management & marketing.  
-- Regency Cakestand 3 Tier generate the most revenue of $133k throughout year 2011 but is not placed in top 5 best selling products, hence we should adopt strategic approach to amplify it's market presence.  
-- Assorted TUTTI FRUIT ROUND BOX has the highest return rate of 24nos, which indicates a significant quality control issue, such as spoilage, damaged packaging, or customer dissatisfaction.  
+- Jumbo Bag is the highest-selling product by volume, peaking at 45k sold and 3rd in terms of revenue $80k.  
+- Regency Cakestand 3 Tier generates the highest revenue despite lower sales volume → strong pricing power.  
+- Assorted TUTTI FRUIT ROUND BOX has the highest return rate, indicating potential quality or satisfaction issues.  
+
+## Business RecommendationsBusiness Recommendations:  
+- Focus retention strategies (e.g., loyalty programs) on high-value customers (top 20%).  
+- Expand and promote high-revenue products with strong margins.
+- Investigate and resolve quality issues for high-return products.
+- Diversify market reach beyond the UK to reduce geographic dependency.  
 
 ## Conclusion
-As a individual who has interest in data related skillsets/jobs, I embarked on this project to apply what I've learned throughout the months. E.g. validate original dataset, create new column metrics and ensure data standardizaiton/consistency. I hope this project serves as a strong portfolio for my data adventure.  
+This project demonstrates an end-to-end data analysis workflow, from data cleaning and modeling to insight generation and visualization. It highlights the importance of customer segmentation, product strategy, and geographic performance in driving business growth.
