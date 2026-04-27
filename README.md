@@ -1,35 +1,33 @@
-# Dashboard
+# 📊 Dashboard
 <img width="1522" height="890" alt="image" src="https://github.com/user-attachments/assets/dcd50043-acfd-49b4-a98f-65bfa61fd4df" />
 <img width="1543" height="767" alt="image" src="https://github.com/user-attachments/assets/b0b8d1a2-6997-4252-bb05-ed01bd01e732" />
 Button to toggle for quantity, sales and return of products
 <img width="1546" height="851" alt="image" src="https://github.com/user-attachments/assets/7e58ce69-811f-485b-a63c-4ee1a71ded93" />
 
-## Introduction/Project Overview  
+## 📌 Introduction/Project Overview  
 This project analyzes transactional e-commerce data to identify key revenue drivers, customer purchasing behavior, and product performance. The goal is to generate actionable insights that support sales growth and customer retention strategies.
 
 ## Dashboard File  
 My final dashboard file is in [dashboard.pbix](dashboard.pbix)
 
-## Question to Analyze and why
-The analysis focuses on three key areas:
+## 🎯 Question to Analyze and why
+The analysis focuses on three key areas:  
 
-Revenue Analysis  
+Revenue Analysis:  
 - What is revenue trend overtime?  
 - Which Country generate the most revenue?  
 
-Product Analysis  
+Product Analysis:  
 - Which products generate the highest sales volume?
 - Which products contribute the most revenue?
 
-Customer Analysis  
+Customer Analysis:  
 - What is the proportion of one-time vs repeat customers?
 - How is revenue distributed across customer segments?
 
 Note: Data with null value in customer_id/stock_name and stock_code_category that is non sales related e.g. Manual input, postage, discount and so on is excluded to improve overall data accuracy.
 
-After analyzing the above questions, stakeholders can act accordingly. E.g. carry out investigation or studies on worst performance product or introduce customer reward scheme for customer retention purposes.
-
-## Data Model  
+## 🏗️ Data Model  
 A star schema was implemented to improve performance and scalability:  
 
 Fact Table:  
@@ -39,7 +37,7 @@ Dimension Tables:
 - Customer  
 - Product  
 
-## Python
+## ⚙️ Python
 - Pandas for data preprocessing and standardization before loading into SQL server
 
 ## SQL Skill Used
@@ -50,16 +48,16 @@ Dimension Tables:
 - Data Enrichment e.g. Creating new column after spilting into DIM & FACT table.
 - Data validation for accuracy and consistency e.g. Scipts to check for duplication, accuracy and integrity.
 
-## Power BI Used
+## ⚙️ Power BI Used
 - Interactive dashboard development
 - Bookmark toggle (Sales / Quantity / Returns)
 - DAX measures for KPI calculation
 - Visualizations: Bar, Line, Pie, Cards
 
-## Construction Project Dataset
+## 🗂️ Ecommerce Project Dataset
 The dataset use for this project is obtained from Kaggle [Ecommmerce_Dataset](https://www.kaggle.com/datasets/luisrenterialezano/retail-sales-dataset?utm_source=chatgpt.com)
 
-## Insights
+## 🔍 Insights
 Revenue Analysis  
 - Revenue shows a strong upward trend, peaking at 1.12M in November.  
 - United Kingdom contributes 82% of total revenue, indicating heavy geographic concentration.  
@@ -73,11 +71,11 @@ Product Analysis
 - Regency Cakestand 3 Tier generates the highest revenue despite lower sales volume → strong pricing power.  
 - Assorted TUTTI FRUIT ROUND BOX has the highest return rate, indicating potential quality or satisfaction issues.  
 
-## Business Recommendations:  
+## 💡 Business Recommendations:  
 - Focus retention strategies (e.g., loyalty programs) on high-value customers (top 20%).  
 - Expand and promote high-revenue products with strong margins.
 - Investigate and resolve quality issues for high-return products.
 - Diversify market reach beyond the UK to reduce geographic dependency.  
 
-## Conclusion
+## ✅ Conclusion
 This project demonstrates an end-to-end data analysis workflow, from data cleaning and modeling to insight generation and visualization. It highlights the importance of customer segmentation, product strategy, and geographic performance in driving business growth.
