@@ -1,8 +1,8 @@
 # 📊 Dashboard
-<img width="1923" height="1093" alt="image" src="https://github.com/user-attachments/assets/c99b2865-5d30-404f-a0f1-efa9ac9c7dee" />
-<img width="1933" height="1082" alt="image" src="https://github.com/user-attachments/assets/39169d54-685d-4411-9fc2-81ffd669b142" />
-Button to toggle for quantity, sales and return of products
-<img width="1898" height="1091" alt="image" src="https://github.com/user-attachments/assets/85db463e-d58a-41c9-a048-c47b7a0f93ed" />
+<img width="1923" height="1093" alt="image" src="https://github.com/user-attachments/assets/c99b2865-5d30-404f-a0f1-efa9ac9c7dee" />  
+<img width="1933" height="1082" alt="image" src="https://github.com/user-attachments/assets/39169d54-685d-4411-9fc2-81ffd669b142" />  
+Button to toggle for quantity, sales and return of products  
+<img width="1898" height="1091" alt="image" src="https://github.com/user-attachments/assets/85db463e-d58a-41c9-a048-c47b7a0f93ed" />  
 
 ## 📌 Introduction/Project Overview  
 This project analyzes transactional e-commerce data to identify key revenue drivers, customer purchasing behavior, and product performance. The goal is to generate actionable insights that support sales growth and customer retention strategies.
