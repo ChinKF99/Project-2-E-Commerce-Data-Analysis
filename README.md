@@ -37,7 +37,7 @@ Dimension Tables:
 - Customer  
 - Product  
 
-⚙️ Tools & Skills Used
+## Tools & Skills Used
 
 ## Python
 - Pandas for data preprocessing and standardization before loading into SQL server
