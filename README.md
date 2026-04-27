@@ -69,7 +69,7 @@ Customer Analysis
 - The top 20% of customers generate 74% of total revenue, highlighting a strong Pareto distribution.     
 
 Product Analysis  
-- Jumbo Bag is the highest-selling product by volume, peaking at 45k sold and 3rd in terms of revenue $80k.  
+- WW2 Gliders ASSTD Designs is the highest-selling product by volume, peaking at 45k sold and 3rd in terms of revenue $80k.  
 - Regency Cakestand 3 Tier generates the highest revenue despite lower sales volume → strong pricing power.  
 - Assorted TUTTI FRUIT ROUND BOX has the highest return rate, indicating potential quality or satisfaction issues.  
 
