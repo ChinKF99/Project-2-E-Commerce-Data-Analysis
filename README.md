@@ -73,7 +73,7 @@ Product Analysis
 - Regency Cakestand 3 Tier generates the highest revenue despite lower sales volume → strong pricing power.  
 - Assorted TUTTI FRUIT ROUND BOX has the highest return rate, indicating potential quality or satisfaction issues.  
 
-## Business RecommendationsBusiness Recommendations:  
+## Business Recommendations:  
 - Focus retention strategies (e.g., loyalty programs) on high-value customers (top 20%).  
 - Expand and promote high-revenue products with strong margins.
 - Investigate and resolve quality issues for high-return products.
